@@ -8,16 +8,28 @@ Remover uma imgem
 `docker rmi nome_da_imagem`
 
 Remover várias imagens
+
 `docker rm $(docker ps -a -q) -f`
 
 Executar uma imagem de modo iterativo usando o bash
+
 `docker run -it thyagodias/nginx-com-vim:latest bash`
 
 Buildar uma imagem
+
 `docker build -t thyagodias/nginx-com-vim:latest .`
 
-Acessar um container rodando
+Para buildar com um dockerfile diferente do padrão
+
+`docker build -t thyagodias/nginx:prod . -f Dockerfile.prod`
+
+Acessar um container que está rodando
+
 `docker attach ubuntu1`
+
+Limpar as imagens
+
+`docker rm $(docker ps -a -q) -f`
 
 
 ### Network
